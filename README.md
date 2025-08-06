@@ -236,10 +236,10 @@ kubectl get svc -n fastapi-app
 Access the app via the external IP.
 
 * Ingress (Optional):
-Map your domain (e.g., todo.local) to the ingress controller IP in /etc/hosts:
+Map your domain (e.g., kumar.mytodo.com) to the ingress controller IP in /etc/hosts:
 
 ```bash
-127.0.0.1 kumar.todo.com
+127.0.0.1 kumar.mytodo.com
 ```
 
 Then open: http://kumar.todo.com
@@ -251,4 +251,5 @@ To delete everything:
 ```bash
 kubectl delete -f k8s/
 ```
+
 
