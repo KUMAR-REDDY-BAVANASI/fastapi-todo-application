@@ -268,6 +268,18 @@ kubectl get svc -n fastapi-app
 Access the app via the external IP.
 
 🚪 Ingress (Optional):
+
+🔧 Install NGINX ingress controller 
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml
+```
+
+Wait a few seconds, then check status again:
+
+```bash
+kubectl get pods -n ingress-nginx
+```
+
 Map your domain to the ingress controller IP in your /etc/hosts file (for local use):
 
 ```bash
@@ -283,4 +295,5 @@ To delete everything:
 ```bash
 kubectl delete -f k8s/
 ```
+
 
