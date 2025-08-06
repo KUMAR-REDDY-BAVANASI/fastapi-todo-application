@@ -76,9 +76,11 @@ cd fastapi-todo-application
 2. Create a virtual environment (optional but recommended)
 
 ```bash
-python -m venv venv
-venv\Scripts\activate  # On Windows
+python3 -m venv venv      # On macOS/Linux
 source venv/bin/activate  # On macOS/Linux
+
+python -m venv venv    # On Windows
+venv\Scripts\activate  # On Windows
 ```
 
 3. Install dependencies
@@ -135,5 +137,6 @@ Handling form submissions in FastAPI
 Building REST endpoints
 
 SQLite database interaction via SQLModel
+
 
 
