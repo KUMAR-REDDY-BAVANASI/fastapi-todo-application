@@ -137,6 +137,3 @@ Handling form submissions in FastAPI
 Building REST endpoints
 
 SQLite database interaction via SQLModel
-
-
-
