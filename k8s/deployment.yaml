@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: todo-app
-          image: fastapi-todo-app:latest  # Change this if pushing to registry
+          image: kumarreddybavanasi/fastapi-todo-app:latest  # Use your registry image once the image is pushed to DockerHub/ECR/ACR/Nexus
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
