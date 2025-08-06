@@ -12,7 +12,7 @@ A simple and clean web-based To-Do List application built with **FastAPI**, **SQ
 - 🗂 Persistent data using SQLite
 - 🌐 Fully backend-rendered Web UI using FastAPI + Jinja2
 
-# 🧠 Why FastAPI?
+## 🧠 Why FastAPI?
 
 We chose FastAPI because it's:
 
@@ -37,7 +37,7 @@ You also get ReDoc (alternative view):
 
 http://127.0.0.1:8000/redoc
 
-# With Swagger, you can:
+## With Swagger, you can:
 
 ✅Try out endpoints directly in your browser
 
@@ -94,7 +94,7 @@ pip3 install -r requirements.txt   # On macOS/Linux
 pip install -r requirements.txt    # On Windows
 ```
 
-# ▶️ Running the App
+## ▶️ Running the App
 
 ```bash
 uvicorn main:app --reload
@@ -104,7 +104,7 @@ Visit the app in your browser at: 👉 http://127.0.0.1:8000
 
 ![App Screenshot](assets/fastapi_todo_homepage.png)
 
-# 🧪 Features Overview
+## 🧪 Features Overview
 
 Add task with ID + title
 
@@ -116,7 +116,7 @@ Delete individual task
 
 All data saved in database.db
 
-# 📦 Requirements
+## 📦 Requirements
 
 Python 3.8+
 
@@ -130,7 +130,7 @@ Uvicorn
 
 python-multipart
 
-# 📚 Learnings
+## 📚 Learnings
 
 How to use FastAPI for full-stack web development
 
@@ -143,8 +143,8 @@ Building REST endpoints
 SQLite database interaction via SQLModel
 
 
-# 🐳 Run with Docker (Optional)
-# You can containerize the FastAPI To-Do app using Docker or Docker Compose.
+## 🐳 Run with Docker (Optional)
+You can containerize the FastAPI To-Do app using Docker or Docker Compose.
 
 ```bash
 # 1. Build the Docker image
@@ -177,9 +177,8 @@ docker-compose down
 
 👉 App will be available at: http://localhost:8002
 
-# 📦 Docker Image Overview
+## 📦 Docker Image Overview
 
 * Base Image: python:3.10-slim
 * Exposed Port: 8000
 * Startup CMD: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-
