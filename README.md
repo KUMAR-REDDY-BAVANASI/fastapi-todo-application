@@ -226,9 +226,40 @@ kubectl apply -f k8s/service.yaml
 kubectl apply -f k8s/ingress.yaml
 ```
 
-## 🌐 Accessing the Application
+## 🧪 Accessing the Application using kubectl port-forward
 
-* LoadBalancer:
+Before exposing the application via a LoadBalancer or Ingress, you can use kubectl port-forward to access your FastAPI app locally.
+
+### 🛠 Step-by-Step Instructions
+* Get the Pod Name:
+
+```bash
+kubectl get pods -n fastapi-app
+```
+
+* Port-forward the Pod to your local machine:
+
+```bash
+kubectl port-forward pod/<POD_NAME> 8000:8000 -n fastapi-app
+```
+
+Replace <POD_NAME> with the actual pod name from the output of the previous command.
+
+✅ Example:
+If your pod is named todo-app-cc88dcd86-zzmfb, then run:
+
+```bash
+kubectl port-forward pod/todo-app-cc88dcd86-zzmfb 8000:8000 -n fastapi-app
+```
+
+Now visit 👉 http://localhost:8000 to access your app.
+
+✅ This command will forward port 8000 from your local machine to port 8000 inside the Pod.
+
+
+## 🌐 Accessing the Application via loadBalancer or Ingress - Only When Kubernetes is Hosted on Cloud Platform
+
+* LoadBalancer (Optional):
 ```bash
 kubectl get svc -n fastapi-app
 ```
@@ -251,6 +282,3 @@ To delete everything:
 ```bash
 kubectl delete -f k8s/
 ```
-
-
-
