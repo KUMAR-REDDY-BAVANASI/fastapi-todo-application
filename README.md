@@ -164,7 +164,7 @@ docker stop <container_id>
 docker rm <container_id>
 ```
 
-📦 Run using Docker Compose (Optional)
+## 📦 Run using Docker Compose (Optional)
 You can also use Docker Compose to simplify the process:
 
 ```bash
@@ -182,3 +182,4 @@ docker-compose down
 * Base Image: python:3.10-slim
 * Exposed Port: 8000
 * Startup CMD: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
