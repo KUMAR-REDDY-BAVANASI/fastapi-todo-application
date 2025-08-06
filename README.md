@@ -257,17 +257,18 @@ Now visit 👉 http://localhost:8000 to access your app.
 ✅ This command will forward port 8000 from your local machine to port 8000 inside the Pod.
 
 
-## 🌐 Accessing the Application via loadBalancer or Ingress - Only When Kubernetes is Hosted on Cloud Platform
+## 🌐 Accessing the Application via LoadBalancer or Ingress (Cloud Only)
+Use these options when running your Kubernetes cluster on a cloud provider like Azure AKS, AWS EKS, GCP GKE, etc.
 
-* LoadBalancer (Optional):
+📦 LoadBalancer (Optional):
 ```bash
 kubectl get svc -n fastapi-app
 ```
 
 Access the app via the external IP.
 
-* Ingress (Optional):
-Map your domain (e.g., kumar.mytodo.com) to the ingress controller IP in /etc/hosts:
+🚪 Ingress (Optional):
+Map your domain to the ingress controller IP in your /etc/hosts file (for local use):
 
 ```bash
 127.0.0.1 kumar.mytodo.com
@@ -282,3 +283,4 @@ To delete everything:
 ```bash
 kubectl delete -f k8s/
 ```
+
