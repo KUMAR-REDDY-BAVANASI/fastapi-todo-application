@@ -183,3 +183,67 @@ docker-compose down
 * Exposed Port: 8000
 * Startup CMD: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
+🚀 Deploying FastAPI To-Do App on Kubernetes
+This project supports deployment on Kubernetes using a set of manifest files.
+
+## 📁 Project Structure
+
+```bash
+k8s/
+├── namespace.yaml         # (Optional) Namespace for isolation
+├── deployment.yaml        # Deployment manifest for app
+├── service.yaml           # Service to expose app
+└── ingress.yaml           # (Optional) Ingress for domain routing
+```
+
+📦 Prerequisites
+Kubernetes cluster (e.g., Minikube, Kind, AKS, EKS, etc.)
+
+kubectl is configured to point to the cluster
+
+Docker image built and pushed to a container registry (if not running locally)
+
+Update the image name in deployment.yaml if you're using a container registry:
+```bash
+image: <your-dockerhub-username>/fastapi-todo-app:latest
+```
+
+🛠️ Apply the Kubernetes Manifests
+
+```bash
+# Apply namespace (optional)
+kubectl apply -f k8s/namespace.yaml
+
+# Deploy the application
+kubectl apply -f k8s/deployment.yaml
+
+# Expose the application via a Kubernetes service
+kubectl apply -f k8s/service.yaml
+
+# (Optional) Apply ingress if you are using a domain-based routing
+kubectl apply -f k8s/ingress.yaml
+```
+
+🌐 Accessing the Application
+* LoadBalancer:
+```bash
+kubectl get svc -n fastapi-app
+```
+
+Access the app via the external IP.
+
+* Ingress (Optional):
+Map your domain (e.g., todo.local) to the ingress controller IP in /etc/hosts:
+
+```bash
+127.0.0.1 kumar.todo.com
+```
+
+Then open: http://kumar.todo.com
+
+🧹 Cleanup Resources
+To delete everything:
+
+```bash
+kubectl delete -f k8s/
+```
