@@ -87,7 +87,11 @@ venv\Scripts\activate  # On Windows
 3. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt   # On macOS/Linux
+```
+
+```bash
+pip install -r requirements.txt    # On Windows
 ```
 
 ▶️ Running the App
@@ -138,4 +142,5 @@ Handling form submissions in FastAPI
 Building REST endpoints
 
 SQLite database interaction via SQLModel
+
 
