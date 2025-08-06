@@ -26,10 +26,10 @@ We chose FastAPI because it's:
 
 🔒 Modern standards — follows OpenAPI, JSON Schema, OAuth2
 
-FastAPI is perfect for projects where performance, developer productivity, and clean code matter.
+FastAPI is ideal for projects where performance, developer productivity, and clean code are paramount.
 
 🔍 API Docs with Swagger UI
-FastAPI provides auto-generated, interactive Swagger UI to test your API endpoints. It’s available at:
+FastAPI provides an auto-generated, interactive Swagger UI to test your API endpoints. It’s available at:
 
 http://127.0.0.1:8000/docs
 
@@ -135,4 +135,5 @@ Handling form submissions in FastAPI
 Building REST endpoints
 
 SQLite database interaction via SQLModel
+
 
