@@ -154,7 +154,7 @@ docker build -t fastapi-todo-app .
 docker run -d -p 8000:8000 fastapi-todo-app
 ```
 
-👉 App will be accessible at: http://localhost:8001
+👉 App will be accessible at: http://localhost:8000
 
 To stop and remove the container:
 
@@ -175,7 +175,7 @@ docker-compose up --build
 docker-compose down
 ```
 
-👉 App will be available at: http://localhost:8002
+👉 App will be available at: http://localhost:8000
 
 ## 📦 Docker Image Overview
 
@@ -251,5 +251,6 @@ To delete everything:
 ```bash
 kubectl delete -f k8s/
 ```
+
 
 
