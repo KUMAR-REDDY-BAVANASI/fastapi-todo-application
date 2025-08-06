@@ -100,8 +100,7 @@ pip install -r requirements.txt    # On Windows
 uvicorn main:app --reload
 ```
 
-Visit the app in your browser at:
-👉 http://127.0.0.1:8000
+Visit the app in your browser at: 👉 http://127.0.0.1:8000
 
 ![App Screenshot](assets/fastapi_todo_homepage.png)
 
@@ -144,3 +143,43 @@ Building REST endpoints
 SQLite database interaction via SQLModel
 
 
+🐳 Run with Docker (Optional)
+# You can containerize the FastAPI To-Do app using Docker or Docker Compose.
+
+```bash
+# 1. Build the Docker image
+docker build -t fastapi-todo-app .
+
+# 2. Run the container
+docker run -d -p 8000:8000 fastapi-todo-app
+```
+
+👉 App will be accessible at: http://localhost:8001
+
+To stop and remove the container:
+
+```bash
+docker ps                # Get the container ID
+docker stop <container_id>
+docker rm <container_id>
+```
+
+📦 Run using Docker Compose (Optional)
+You can also use Docker Compose to simplify the process:
+
+```bash
+# 1. Build and start the app
+docker-compose up --build
+
+# 2. Stop the app
+docker-compose down
+```
+
+👉 App will be available at: http://localhost:8002
+
+📦 Docker Image Overview
+Base Image: python:3.10-slim
+
+Exposed Port: 8000
+
+Startup CMD: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
