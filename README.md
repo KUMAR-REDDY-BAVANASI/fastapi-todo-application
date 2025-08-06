@@ -73,7 +73,7 @@ git clone https://github.com/KUMAR-REDDY-BAVANASI/fastapi-todo-application.git
 cd fastapi-todo-application
 ```
 
-2. Create virtual environment (optional but recommended)
+2. Create a virtual environment (optional but recommended)
 
 ```bash
 python -m venv venv
@@ -135,3 +135,4 @@ Handling form submissions in FastAPI
 Building REST endpoints
 
 SQLite database interaction via SQLModel
+
