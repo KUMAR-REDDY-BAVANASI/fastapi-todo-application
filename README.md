@@ -48,6 +48,7 @@ With Swagger, you can:
 ✅This makes API testing fast and visual — no need for Postman or CURL.
 
 ![App Screenshot](assets/swagger_doc.png)
+![App Screenshot](assets/redoc_doc.png)
 
 ---
 
@@ -137,3 +138,4 @@ Handling form submissions in FastAPI
 Building REST endpoints
 
 SQLite database interaction via SQLModel
+
